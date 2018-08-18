@@ -116,7 +116,7 @@ export class SubscriptionEntryScreen extends PureComponent {
       .then(rsp => rsp.json())
       .then(d => {
         if (d.error) return alert(d.error)
-        //TODO: Implement SubscriptionSuccess UI and nav to it here
+        navigation.replace('SubscriptionSuccess')
       })
       .catch(e => alert(e))
   }
